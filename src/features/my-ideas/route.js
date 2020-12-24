@@ -1,0 +1,13 @@
+// This is the JSON way to define React Router rules in a Rekit app.
+// Learn more from: http://rekit.js.org/docs/routing.html
+
+import { Layout, View, Ideas } from './';
+
+export default {
+  path: 'my-ideas',
+  component: Layout,
+  childRoutes: [
+    { path: 'view/:id', component: View },
+    { path: '', component: Ideas },
+  ],
+};
